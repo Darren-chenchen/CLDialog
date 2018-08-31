@@ -237,11 +237,6 @@ class CLDialogUtil: Operation {
     func showInputView() {
         self.superComponent.addSubview(self.inputView)
         self.inputView.msgLabel.textAlignment = CLDialogManager.share.textAlignment
-//        self.inputView.maxLength = CLDialogManager.share.maxLength
-//        self.inputView.onlyNumberAndPoint = CLDialogManager.share.onlyNumberAndPoint
-//        self.inputView.onlyNumber = CLDialogManager.share.onlyNumber
-//        self.inputView.allowEmoji = CLDialogManager.share.allowEmoji
-//        self.inputView.pointLength = CLDialogManager.share.pointLength
         self.inputView.setNeedsLayout()
         
         if CLDialogManager.share.supportAnimate {

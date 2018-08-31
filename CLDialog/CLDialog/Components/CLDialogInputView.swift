@@ -134,13 +134,13 @@ class CLDialogInputView: UIView {
     }
     
     @objc func clickLeftbtn() {
-        CLDialogManager.share.resetInputProps()
+        CLDialogManager.share.cl_resetInputProps()
         if self.leftHandler != nil {
             self.leftHandler!(self.dealText())
         }
     }
     @objc func clickRightbtn() {
-        CLDialogManager.share.resetInputProps()
+        CLDialogManager.share.cl_resetInputProps()
         if self.rightHandler != nil {
             self.rightHandler!(self.dealText())
         }

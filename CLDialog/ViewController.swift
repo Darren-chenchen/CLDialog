@@ -33,7 +33,6 @@ class ViewController: UIViewController {
                     "禁止动画显示",
                     "打开动画显示",
                     "自定义动画",
-                    "重置默认属性"
     ]
     var titleArr2 = ["展示默认成功图片", "展示默认失败图片", "自定义图片"]
     
@@ -122,10 +121,13 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 0 {
             if indexPath.row == 0 {
+                CLDialogManager.share.mainColor = UIColor.blue
                 CLDialog.cl_show(title: "温馨提示", msg: "确定要取消？", leftActionTitle: "确定", rightActionTitle: "取消", leftHandler: {
                     print("点击了左边")
+                    CLDialogManager.share.mainColor = UIColor.red
                 }) {
                     print("点击了右边")
+                    CLDialogManager.share.mainColor = UIColor.red
                 }
             } else if indexPath.row == 1 {
                 CLDialog.cl_show(title: "温馨提示", msg: "确定要取消？", leftActionTitle: "确定", rightActionTitle: nil, leftHandler: {
@@ -188,8 +190,6 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
                 CLDialog.cl_show(title: "温馨提示", msg: "自定义动画", leftActionTitle: "取消", rightActionTitle: "确定", leftHandler: {
                 }) {
                 }
-            } else if indexPath.row == 11 {
-                CLDialogManager.share.cl_reset()
             }
         }
         

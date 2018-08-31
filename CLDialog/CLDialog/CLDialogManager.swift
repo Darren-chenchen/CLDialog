@@ -56,19 +56,19 @@ public class CLDialogManager {
         return queue
     }()
     
-    public func cl_reset() {
+    
+    // 暂时用不到
+    func cl_reset() {
         self.common()
     }
-    
+    // 暂时用不到
     @available(*, deprecated, message: "Use 'cl_reset' instead.")
-    public func reset() {
+    func reset() {
         self.common()
     }
-    
     func common() {
         self.successImage = UIImage(named: "ic_toast_success", in: BundleUtil.getCurrentBundle(), compatibleWith: nil)
         self.failImage = UIImage(named: "icon_sign", in: BundleUtil.getCurrentBundle(), compatibleWith: nil)
-        self.supportQuene = false
         
         self.textAlignment = .center
         self.mainColor = UIColor.black
@@ -76,14 +76,17 @@ public class CLDialogManager {
         self.setupAnimation()
     }
     
-    func resetInputProps() {
+    func cl_resetInputProps() {
         self.maxLength = nil
         self.allowEmoji = nil
         self.onlyNumberAndPoint = nil
         self.pointLength = nil
         self.onlyNumber = nil
     }
-    
+    // 再次开启动画
+    public func cl_resetSetupAnimation() {
+        self.setupAnimation()
+    }
     func add(_ toast: CLDialogUtil) {
         self.queue.addOperation(toast)
     }
