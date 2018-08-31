@@ -148,3 +148,13 @@ public var failImage = UIImage(named: "icon_sign", in: BundleUtil.getCurrentBund
 # 使用注意
 1.由于CLDialogManager 是一个单例对象，当设置相应的属性后，那整个项目的Dialog就会保持这个属性值。如果项目Dialog较为统一，那么只要在appdelegate中设置一次即可，如果只是想偶尔改变一次Dialog的属性值，那么再改变之后，记得重新赋值一下相关的属性。
 
+# 截图
+
+![](https://github.com/Darren-chenchen/CLDialog/blob/master/screenshot/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-31%20%E4%B8%8B%E5%8D%882.57.47.png?raw=true)
+
+![](https://github.com/Darren-chenchen/CLDialog/blob/master/screenshot/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-31%20%E4%B8%8B%E5%8D%882.58.03.png?raw=true)
+
+![](https://github.com/Darren-chenchen/CLDialog/blob/master/screenshot/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-31%20%E4%B8%8B%E5%8D%882.58.27.png?raw=true)
+
+![](https://github.com/Darren-chenchen/CLDialog/blob/master/screenshot/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-31%20%E4%B8%8B%E5%8D%882.58.50.png?raw=true)
+
