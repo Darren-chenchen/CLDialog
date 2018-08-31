@@ -57,11 +57,10 @@ public class CLDialogManager {
     }()
     
     
-    // 暂时用不到
-    func cl_reset() {
+    public func cl_resetDefaultProps() {
         self.common()
     }
-    // 暂时用不到
+
     @available(*, deprecated, message: "Use 'cl_reset' instead.")
     func reset() {
         self.common()
@@ -76,7 +75,7 @@ public class CLDialogManager {
         self.setupAnimation()
     }
     
-    func cl_resetInputProps() {
+    public func cl_resetInputProps() {
         self.maxLength = nil
         self.allowEmoji = nil
         self.onlyNumberAndPoint = nil
